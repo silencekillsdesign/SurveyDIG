@@ -14,13 +14,11 @@ label, legend {
 input {
   &[type='text'], &[type='password'], &[type='date'], &[type='datetime'], &[type='datetime-local'], &[type='month'], &[type='week'], &[type='email'], &[type='number'], &[type='search'], &[type='tel'], &[type='time'], &[type='url'], &[type='color'] {
     margin-bottom: 0;
-    color: currentColor;
   }
 }
 
 textarea, .dropdown {
   margin-bottom: 0;
-  color: currentColor;
 }
 
 .container {
@@ -57,6 +55,10 @@ textarea, .dropdown {
   legend {
     margin-top: 1em;
   }
+}
+
+label.likert-label {
+@include show-for-only(small);
 }
 
 .long-text-input {
