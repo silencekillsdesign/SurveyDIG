@@ -41,12 +41,19 @@ textarea, .dropdown {
 .text-header {
   background: $brand-primary;
   color: white;
-  line-height: 2;
+  line-height: 1.25;
   padding: .5em 0;
+  .response {
+    border-left: none;
+  }
 }
 
 .response {
   max-width: 5em;
+  padding: .125em;
+  @include breakpoint(medium) {
+    border-left: 1px solid $light-gray;
+  }
 }
 
 .question-row, .likert-question {
