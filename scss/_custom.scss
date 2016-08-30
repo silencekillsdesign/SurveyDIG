@@ -1,6 +1,10 @@
-header {
-  margin-bottom: 2em;
-}
+$brand-primary: dodgerblue;
+$brand-secondary: blueviolet;
+$brand-copy: #495058;
+$brand-copy-light: #f7f7f7;
+
+$topbar-background: $brand-primary;
+
 
 label, legend {
   font-size: .875em;
@@ -8,7 +12,12 @@ label, legend {
 }
 
 .top-bar {
-  background: coral;
+  background-color: $brand-primary;
+  margin-bottom: 0;
+}
+.sd-profile-text {
+  background: $brand-copy-light;
+  margin-bottom: 1em;
 }
 
 input {
@@ -30,7 +39,7 @@ textarea, .dropdown {
 }
 
 .text-header {
-  background: dodgerblue;
+  background: $brand-primary;
   color: white;
   line-height: 2;
   padding: .5em 0;
