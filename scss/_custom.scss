@@ -73,6 +73,10 @@ textarea, .dropdown {
   }
 }
 
+.question-number {
+  padding-right: 0;
+}
+
 .likert-label {
 @include show-for-only(small);
   font-size: 70%;
