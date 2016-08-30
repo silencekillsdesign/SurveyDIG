@@ -59,6 +59,7 @@ textarea, .dropdown {
 
 .likert-label {
 @include show-for-only(small);
+  font-size: 70%;
 }
 
 .long-text-input {
