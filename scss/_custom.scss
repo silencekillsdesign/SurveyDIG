@@ -169,10 +169,14 @@ option[selected] .select-paceholder {
       color: white;
     }
   }
-  label[for] {
-    margin-top: .125em;
-    margin-left: 1.75em;
-  }
+}
+
+[type='checkbox']+label, [type='radio']+label {
+    display: inline-block;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    vertical-align: baseline;
 }
 
 .footer {
