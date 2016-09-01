@@ -11,15 +11,6 @@ label, legend {
   margin: 0;
 }
 
-.top-bar {
-  background-color: $brand-primary;
-  margin-bottom: 0;
-}
-.sd-profile-text {
-  background: $brand-copy-light;
-  margin-bottom: 1em;
-}
-
 input {
   &[type='text'], &[type='password'], &[type='date'], &[type='datetime'], &[type='datetime-local'], &[type='month'], &[type='week'], &[type='email'], &[type='number'], &[type='search'], &[type='tel'], &[type='time'], &[type='url'], &[type='color'] {
     margin-bottom: 0;
@@ -34,9 +25,20 @@ textarea, .dropdown {
   max-width: 960px;
 }
 
+.top-bar {
+  background-color: $brand-primary;
+  margin-bottom: 0;
+}
+
+.sd-profile-text {
+  background: $brand-copy-light;
+}
+
 .form-container {
   border: 2px solid dodgerblue;
+  margin-top: 2em;
 }
+
 
 .text-header {
   background: $brand-primary;
@@ -167,7 +169,7 @@ option[selected] .select-paceholder {
       color: white;
     }
   }
-  > label[for] {
+  label[for] {
     margin-top: .125em;
     margin-left: 1.75em;
   }
