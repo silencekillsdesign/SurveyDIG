@@ -119,7 +119,7 @@ option[selected] .select-paceholder {
   }
 }
 
-.vertical-list {
+.vertical {
   margin: 0;
   padding: .5em;
   li {
@@ -141,6 +141,9 @@ option[selected] .select-paceholder {
 
 .styled-checkbox {
   line-height: 1.25em;
+  label {
+    margin-left: 1.5rem;
+  }
   input[type=checkbox] {
     position: relative;
     width: 0px;
@@ -171,13 +174,6 @@ option[selected] .select-paceholder {
   }
 }
 
-[type='checkbox']+label, [type='radio']+label {
-    display: inline-block;
-    margin-left: 1.5rem;
-    margin-right: 1rem;
-    margin-bottom: 0;
-    vertical-align: baseline;
-}
 
 .footer {
   margin-top: 2em;
