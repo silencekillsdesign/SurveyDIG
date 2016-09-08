@@ -119,7 +119,7 @@ option[selected] .select-paceholder {
   }
 }
 
-.vertical {
+.vertical-list {
   margin: 0;
   padding: .5em;
   li {
@@ -172,8 +172,16 @@ option[selected] .select-paceholder {
       color: white;
     }
   }
+<<<<<<< HEAD
 }
 
+=======
+  label[for] {
+    margin-top: .125em;
+    margin-left: 1.75em;
+  }
+}
+>>>>>>> parent of e6dea56... css
 
 .footer {
   margin-top: 2em;
