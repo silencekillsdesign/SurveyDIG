@@ -34,6 +34,7 @@ textarea, .dropdown {
   margin-bottom: 0;
 }
 
+// fix this
 .sd-course-info {
   color: white;
 }
@@ -78,6 +79,16 @@ textarea, .dropdown {
   &:nth-child(odd) {
     background: #f5f5f5;
   }
+}
+
+.required:after {
+  display: inline-block;
+  position: relative;
+  content: "*";
+  color: coral;
+  font-size: 140%;
+  line-height: 0;
+  margin: 0 0 0 .125em;
 }
 
 .question-number {
