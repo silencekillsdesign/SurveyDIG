@@ -71,11 +71,8 @@ textarea, .dropdown {
   padding: .5em 0;
 }
 
-.question-row:nth-child(odd) {
-  background: #f5f5f5;
-}
-
-.likert-question {
+.question-row {
+  padding: .5em 0;
   &:nth-child(odd) {
     background: #f5f5f5;
   }
@@ -140,25 +137,6 @@ option[selected] .select-paceholder {
   }
 }
 
-.vertical-list {
-  margin: 0;
-  @include flex-align(spaced, stretch);
-  li {
-    display: inline-block;
-//    text-indent: 1em;
-    min-width: 100%;
-    label {
-      text-indent: 1em;
-      margin-left: 2em;
-    }
-  }
-  .styled-radio input[type=radio]:before {
-    left: 0;
-    bottom: .5em;
-  }
-}
-
-
 .styled-checkbox {
   line-height: 1.25em;
   label {
@@ -197,6 +175,29 @@ option[selected] .select-paceholder {
     margin-left: 1.75em;
   }
 }
+
+.vertical-list {
+  margin: 0;
+  @include flex-align(spaced, stretch);
+  li {
+    display: inline-block;
+    min-width: 100%;
+    label {
+      text-indent: 1em;
+      margin-left: 2em;
+    }
+  }
+  .styled-radio input[type=radio]:before {
+    left: 0;
+    bottom: .5em;
+  }
+}
+
+.submit-button {
+  margin-top: 1em;
+}
+
+
 
 .footer {
   margin-top: 2em;
