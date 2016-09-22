@@ -48,6 +48,9 @@ textarea, .dropdown {
   margin-top: 2em;
 }
 
+.logo-header {
+  padding: .5em;
+}
 
 .text-header {
   background: $brand-primary;
@@ -96,9 +99,8 @@ textarea, .dropdown {
   margin-left: 0;
 }
 
-.likert-label {
+.responce-label {
   font-size: 70%;
-  @include show-for-only(small);
 }
 .vertical-radio-label {
   font-size: 70%;
@@ -193,7 +195,7 @@ option[selected] .select-paceholder {
   }
 }
 
-.submit-button {
+.button .submit-button {
   margin-top: 1em;
 }
 
