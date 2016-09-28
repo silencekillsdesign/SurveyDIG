@@ -101,7 +101,7 @@ textarea, .dropdown {
 
 .response-label {
   font-size: 70%;
-  line-height: 1.375;
+//  line-height: 1.375;
 }
 
 .long-text-input {
@@ -199,6 +199,10 @@ option[selected] .select-paceholder {
 
 .sd-submit-button {
   margin-top: 1em;
+}
+
+.check-on-view {
+  color: $brand-primary;
 }
 
 .footer {
