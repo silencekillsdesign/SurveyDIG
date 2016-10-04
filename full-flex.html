@@ -52,7 +52,7 @@
       <small class="sd-course-description">English 101</small>
     </h4>
 
-    <h4 class="subheader sd-prof-info">
+    <h4 class=" subheader sd-prof-info">
       <span class="sd-prof-static">Instructor: </span>
       <small class="sd-prof-name small">Dr. John Kipling</small>
     </h4>
@@ -105,9 +105,11 @@
 
 <main class='row container'>
 
+<form class="large-12 columns form-container" name="assessment" method="POST" ACTION="/surveydig/PRO$Profile_Item_Web.Process" onSubmit="return myValidate(0);" data-abide novalidate>
 
-
-<form class="large-12 columns form-container" name="assessment" method="POST" ACTION="/surveydig/PRO$Profile_Item_Web.Process" onSubmit="return myValidate(0);">
+  <div data-abide-error class="alert callout" style="display: none;">
+    <p><i class="fi-alert"></i> There are some errors in your form.</p>
+  </div>
 
   <div class="hide">
 
@@ -1266,7 +1268,7 @@
     <input type="hidden" name="item_id" value="19932">
     <input type="hidden" name="sort_order" value="110">
     <legend class="row align-top">
-      <span class="question-number shrink columns">11.</span>
+      <span class="question-number columns">11.</span>
       <span class="question-description columns required">The instructor dealt with questions effectively.</span>
     </legend>
 
@@ -3724,7 +3726,8 @@
 
   <div class='medium-7 columns expand'>
     <input type="hidden" name="score" value="">
-    <input id="id-39" placeholder="Enter text here..." type="text" class="input_text_req" name="short_text" value="" maxlength="4000" >
+    <input id="id-39" placeholder="Enter text here..." type="text" class="input_text_req" name="short_text" value="" maxlength="4000" aria-describedby="exampleHelpText" required >
+    <p class="help-text" id="exampleHelpText">Enter a password please.</p>
   </div>
   <!-- div close 18 -->
 
@@ -3772,7 +3775,7 @@
     <input type="hidden" name="item_id" value="20201">
     <input type="hidden" name="sort_order" value="555">
     <label for="id-40" class="row align-top">
-      <span class="question-number shrink columns">40.</span>
+      <span class="question-number columns">40.</span>
       <span class="question-description columns ">What is your favorite date from history?</span>
     </label>
 

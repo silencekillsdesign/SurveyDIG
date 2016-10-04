@@ -32,11 +32,15 @@ textarea, .dropdown {
 .top-bar {
   background-color: $brand-primary;
   margin-bottom: 0;
+  color: white;
 }
 
 // fix this
-.sd-course-info {
-  color: white;
+.sd-course-info, .sd-prof-info {
+  color: $brand-copy-light !important;
+  small {
+    color: darken($brand-copy-light, 10);
+  }
 }
 
 .sd-profile-text {
@@ -68,6 +72,10 @@ textarea, .dropdown {
 .response {
   max-width: 5em;
   padding: .125em;
+  & label {
+    line-height: 1.25;
+    vertical-align: baseline;
+  }
 }
 
 .question-row {
@@ -93,6 +101,7 @@ textarea, .dropdown {
 
 .question-number {
   padding-right: 0;
+  min-width: 8em;
 }
 .question-description {
   padding-left: 0;
@@ -203,6 +212,9 @@ option[selected] .select-paceholder {
 
 .check-on-view {
   color: $brand-primary;
+  & .vertical{
+    float: left;
+  }
 }
 
 .footer {
