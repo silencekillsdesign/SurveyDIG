@@ -76,7 +76,11 @@ textarea, .dropdown {
     line-height: 1.25;
 //    vertical-align: baseline;
   }
-  %:last
+  &:last-of-type {
+    @include breakpoint(medium) {
+      margin-right: 1em;
+    }
+  }
 }
 
 .row .question-row {

@@ -56,6 +56,9 @@ textarea, .dropdown {
   padding: .125em; }
   .response label {
     line-height: 1.25; }
+  @media screen and (min-width: 45em) {
+    .response:last-of-type {
+      margin-right: 1em; } }
 
 .row .question-row {
   padding: .5em 0; }
@@ -146,8 +149,7 @@ option[selected] .select-paceholder {
     min-width: 100%; }
     .vertical-list li label {
       text-indent: 1em;
-      margin-left: 2em;
-      float: left; }
+      margin-left: 2em; }
   .vertical-list .styled-radio input[type=radio]:before {
     left: 0;
     bottom: .5em; }
