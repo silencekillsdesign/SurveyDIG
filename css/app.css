@@ -58,9 +58,9 @@ textarea, .dropdown {
     .response:last-of-type {
       margin-right: 1em; } }
 
-.question-row {
+form > .question-row {
   padding: .5em 0; }
-  .question-row:nth-of-type(even) {
+  form > .question-row:nth-of-type(odd) {
     background: #f5f5f5; }
 
 .required:after {
