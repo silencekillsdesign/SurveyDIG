@@ -76,6 +76,7 @@ textarea, .dropdown {
     line-height: 1.25;
 //    vertical-align: baseline;
   }
+  %:last
 }
 
 .row .question-row {
@@ -189,7 +190,7 @@ option[selected] .select-paceholder {
     label {
       text-indent: 1em;
       margin-left: 2em;
-      float: left;
+//      float: left;
     }
   }
   .styled-radio input[type=radio]:before {
