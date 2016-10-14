@@ -74,18 +74,14 @@ textarea, .dropdown {
   padding: .125em;
   & label {
     line-height: 1.25;
-    vertical-align: baseline;
+//    vertical-align: baseline;
   }
 }
 
-.question-row {
+.row .question-row {
   padding: .5em 0;
-}
-
-.question-row {
-  padding: .5em 0;
-  &:nth-child(odd) {
-    background: #f5f5f5;
+  &:nth-child(even) {
+    background: #f5f5f7;
   }
 }
 
@@ -122,7 +118,7 @@ option[selected] .select-paceholder {
   color: #cacaca !important;
 }
 
-.styled-radio input[type=radio] {
+.styled-radio input {
   position: relative;
   width: 0px;
   height: 0px;
@@ -179,53 +175,43 @@ option[selected] .select-paceholder {
       color: white;
     }
   }
-  label[for] {
-    margin-top: .125em;
-    margin-left: 1.75em;
-  }
+//  label[for] {
+//    margin-top: .125em;
+//    margin-left: 1.75em;
+//  }
 }
 
 .vertical-list {
   margin: 0;
-  margin-left: 2.5em;
-  @include flex-align(spaced, stretch);
+  @extend .no-bullet;
   li {
-    display: inline-block;
     min-width: 100%;
     label {
       text-indent: 1em;
       margin-left: 2em;
+      float: left;
     }
   }
   .styled-radio input[type=radio]:before {
     left: 0;
     bottom: .5em;
   }
+  .check-on-view {
+    float: left;
+  }
   @include breakpoint(medium) {
     margin-left: 0;
   }
-  .check-on-view {
-    display: inline-block;
-    float: left;
-    width: auto;
-    + label {
-      margin: -1.75em 0 0 1.75em;
-    }
-  }
-//  .response-label {
-//    display: inline-block;
-//    float: left;
-//  }
 }
 
 .sd-submit-button {
   margin-top: 1em;
 }
 
-.check-on-view {
+.check-on-view  {
   color: $brand-primary;
-  flex-shrink: 1;
 }
+
 
 .footer {
   margin-top: 2em;

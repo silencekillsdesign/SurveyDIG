@@ -1,46 +1,85 @@
-$section-header-bg: dodgerblue;
-$section-header-copy: white;
-$footer-color: lightgray;
-$brand-primary: coral;
+$brand-primary: dodgerblue;
+$brand-secondary: blueviolet;
+$brand-copy: #495058;
+$brand-copy-light: #f7f7f7;
 
-header {
-  margin-bottom: 2em;
-}
+$topbar-background: $brand-primary;
+
 
 label, legend {
   font-size: .875em;
-  line-height: .5em;
   margin: 0;
 }
 
-.top-bar {
-  @inlcude top-bar-container;
-  background-color: $brand-secondary;
-}
-
-input[type='text'], input[type='password'], input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='month'], input[type='week'], input[type='email'], input[type='number'], input[type='search'], input[type='tel'], input[type='time'], input[type='url'], input[type='color'], textarea, .dropdown {
+legend {
   margin-bottom: 0;
-  color: currentColor;
 }
 
+input {
+  &[type='text'], &[type='password'], &[type='date'], &[type='datetime'], &[type='datetime-local'], &[type='month'], &[type='week'], &[type='email'], &[type='number'], &[type='search'], &[type='tel'], &[type='time'], &[type='url'], &[type='color'] {
+    margin-bottom: 0;
+  }
+}
+
+textarea, .dropdown {
+  margin-bottom: 0;
+}
 
 .container {
   max-width: 960px;
 }
 
+.top-bar {
+  background-color: $brand-primary;
+  margin-bottom: 0;
+  color: white;
+}
+
+// fix this
+.sd-course-info, .sd-prof-info {
+  color: $brand-copy-light !important;
+  small {
+    color: darken($brand-copy-light, 10);
+  }
+}
+
+.sd-profile-text {
+  background: $brand-copy-light;
+}
+
 .form-container {
-  border: 2px solid $section-header-bg;
+  border: 2px solid $brand-primary;
+  margin-top: 2em;
+}
+
+.logo-header {
+  padding: .5em;
 }
 
 .text-header {
-  background: $section-header-bg;
-  color: $section-header-copy;
-  line-height: 2;
+  background: $brand-primary;
+  color: white;
+  line-height: 1.25;
   padding: .5em 0;
+  .response {
+    border-left: none;
+  }
+  h5 {
+    margin: .5em 0;
+  }
 }
+
 .response {
   max-width: 5em;
+  padding: .125em;
+  & label {
+    line-height: 1.25;
+    vertical-align: baseline;
+  }
+}
 
+.question-row {
+  padding: .5em 0;
 }
 
 .question-row {
@@ -50,27 +89,37 @@ input[type='text'], input[type='password'], input[type='date'], input[type='date
   }
 }
 
-.likert-question {
-  @extend .question-row;
-  legend {
-    margin-top: 1em;
-  }
-  label {
-  font-size: 60%;
-  @include breakpoint(medium) {
-    display: none;
-    }
-  }
+.required:after {
+  display: inline;
+  position: relative;
+  content: "*";
+  color: coral;
+  font-size: 140%;
+  line-height: 0;
+  margin: 0 0 0 .125em;
+}
+
+.question-number {
+  padding-right: 0;
+  min-width: 8em;
+}
+.question-description {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.response-label {
+  font-size: 70%;
+//  line-height: 1.375;
 }
 
 .long-text-input {
   min-height: 7em;
+  margin-bottom: 0;
 }
 
-option[selected] {
-  .select-paceholder {
-    color: #cacaca !important;
-  }
+option[selected] .select-paceholder {
+  color: #cacaca !important;
 }
 
 .styled-radio input[type=radio] {
@@ -97,33 +146,11 @@ option[selected] {
   }
 }
 
-.vertical-list {
-  margin: 0;
-  .vertical-radio {
-//    margin: 0;
-    top: -.25em;
-    margin: 0 0 0 .75em;
-  }
-  li {
-    display: block;
-    margin-bottom: .5em;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-    label {
-      margin: 0 0 0 1em;
-      padding: 0;
-      top: .5em;
-      vertical-align: baseline;
-      line-height: 2;
-    }
-  }
-}
-
 .styled-checkbox {
-//  margin-bottom: 0;
   line-height: 1.25em;
-//  margin: auto;
+  label {
+    margin-left: 1.5rem;
+  }
   input[type=checkbox] {
     position: relative;
     width: 0px;
@@ -139,8 +166,8 @@ option[selected] {
       bottom: 0;
       left: 0;
       margin: .125em 0 0 0;
-      height: 1.25em;
-      width: 1.25em;
+      height: 1.375em;
+      width: 1.375em;
       border: 2px solid dodgerblue;
       background: white;
       border-radius: 0;
@@ -149,19 +176,59 @@ option[selected] {
       background: dodgerblue;
       content: "X";
       text-indent: .175em;
-      color: $section-header-copy;
+      color: white;
     }
   }
-  > label[for] {
+  label[for] {
     margin-top: .125em;
     margin-left: 1.75em;
   }
 }
 
+.vertical-list {
+  margin: 0;
+  margin-left: 2.5em;
+  @include flex-align(spaced, stretch);
+  li {
+    display: inline-block;
+    min-width: 100%;
+    label {
+      text-indent: 1em;
+      margin-left: 2em;
+    }
+  }
+  .styled-radio input[type=radio]:before {
+    left: 0;
+    bottom: .5em;
+  }
+  @include breakpoint(medium) {
+    margin-left: 0;
+  }
+  .check-on-view {
+    display: inline-block;
+    width: auto;
+    + label {
+      margin: -1.75em 0 0 1.75em;
+    }
+  }
+//  .response-label {
+//    display: inline-block;
+//    float: left;
+//  }
+}
+
+.sd-submit-button {
+  margin-top: 1em;
+}
+
+.check-on-view {
+  color: $brand-primary;
+  flex-shrink: 1;
+}
 
 .footer {
   margin-top: 2em;
   text-align: center;
-  background: $footer-color;
+  background: lightgray;
   padding: 1em;
 }
