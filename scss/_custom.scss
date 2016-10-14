@@ -5,6 +5,10 @@ $brand-copy-light: #f7f7f7;
 
 $topbar-background: $brand-primary;
 
+//Switch
+$switch-background-active: $brand-primary;
+$switch-margin: 0;
+
 
 label, legend {
   font-size: .875em;
@@ -163,9 +167,9 @@ option[selected] .select-paceholder {
       right: 0;
       bottom: 0;
       left: 0;
-      margin: .125em 0 0 0;
-      height: 1.375em;
-      width: 1.375em;
+      margin: .125em 0 0 .25em;
+      height: 1.5em;
+      width: 1.5em;
       border: 2px solid dodgerblue;
       background: white;
       border-radius: 0;
@@ -213,9 +217,9 @@ option[selected] .select-paceholder {
 .check-on-view  {
   color: $brand-primary;
 }
-.switch {
-  margin-bottom: 0 !important;
-}
+//.switch {
+//  margin-bottom: 0 !important;
+//}
 
 .footer {
   margin-top: 2em;

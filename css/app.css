@@ -129,9 +129,9 @@ option[selected] .select-paceholder {
       right: 0;
       bottom: 0;
       left: 0;
-      margin: .125em 0 0 0;
-      height: 1.375em;
-      width: 1.375em;
+      margin: .125em 0 0 .25em;
+      height: 1.5em;
+      width: 1.5em;
       border: 2px solid dodgerblue;
       background: white;
       border-radius: 0; }
@@ -159,9 +159,6 @@ option[selected] .select-paceholder {
 
 .check-on-view {
   color: dodgerblue; }
-
-.switch {
-  margin-bottom: 0 !important; }
 
 .footer {
   margin-top: 2em;
@@ -3050,7 +3047,7 @@ html.is-reveal-open body {
     position: fixed; }
 
 .switch {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   outline: 0;
   position: relative;
   -webkit-user-select: none;
@@ -3091,7 +3088,7 @@ html.is-reveal-open body {
     transform: translate3d(0, 0, 0);
     border-radius: 0; }
   input:checked ~ .switch-paddle {
-    background: #2199e8; }
+    background: dodgerblue; }
     input:checked ~ .switch-paddle::after {
       left: 2.25rem; }
   [data-whatinput='mouse'] input:focus ~ .switch-paddle {
