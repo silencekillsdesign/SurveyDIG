@@ -61,9 +61,6 @@ textarea, .dropdown {
   color: white;
   line-height: 1.25;
   padding: .5em 0;
-  .response {
-    border-left: none;
-  }
   h5 {
     margin: .5em 0;
   }
@@ -83,7 +80,7 @@ textarea, .dropdown {
   }
 }
 
-.question-row {
+.form-container > .question-row {
   padding: .5em 0;
   &:nth-child(even) {
     background: #f5f5f5;
@@ -209,14 +206,16 @@ option[selected] .select-paceholder {
   }
 }
 
-.sd-submit-button {
-  margin-top: 1em;
-}
+//.sd-submit-button {
+//  @include button(true, $foundation-palette(success), $foundation-palette(success), #fff, solid);
+//}
 
 .check-on-view  {
   color: $brand-primary;
 }
-
+.switch {
+  margin-bottom: 0;
+}
 
 .footer {
   margin-top: 2em;

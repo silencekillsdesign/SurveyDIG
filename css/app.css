@@ -46,8 +46,6 @@ textarea, .dropdown {
   color: white;
   line-height: 1.25;
   padding: .5em 0; }
-  .text-header .response {
-    border-left: none; }
   .text-header h5 {
     margin: .5em 0; }
 
@@ -60,9 +58,9 @@ textarea, .dropdown {
     .response:last-of-type {
       margin-right: 1em; } }
 
-.question-row {
+.form-container > .question-row {
   padding: .5em 0; }
-  .question-row:nth-child(even) {
+  .form-container > .question-row:nth-child(even) {
     background: #f5f5f5; }
 
 .required:after {
@@ -159,11 +157,11 @@ option[selected] .select-paceholder {
     .vertical-list {
       margin-left: 0; } }
 
-.sd-submit-button {
-  margin-top: 1em; }
-
 .check-on-view {
   color: dodgerblue; }
+
+.switch {
+  margin-bottom: 0; }
 
 .footer {
   margin-top: 2em;
