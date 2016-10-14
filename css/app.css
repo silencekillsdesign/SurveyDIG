@@ -161,7 +161,7 @@ option[selected] .select-paceholder {
   color: dodgerblue; }
 
 .switch {
-  margin-bottom: 0; }
+  margin-bottom: 0 !important; }
 
 .footer {
   margin-top: 2em;
