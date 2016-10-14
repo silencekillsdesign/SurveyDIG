@@ -60,10 +60,10 @@ textarea, .dropdown {
     .response:last-of-type {
       margin-right: 1em; } }
 
-.row .question-row {
+.question-row {
   padding: .5em 0; }
-  .row .question-row:nth-child(even) {
-    background: #f5f5f7; }
+  .question-row:nth-child(even) {
+    background: #f5f5f5; }
 
 .required:after {
   display: inline;
