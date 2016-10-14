@@ -157,6 +157,9 @@ option[selected] .select-paceholder {
     .vertical-list {
       margin-left: 0; } }
 
+.sd-submit-button {
+  margin-top: 1em !important; }
+
 .check-on-view {
   color: dodgerblue; }
 

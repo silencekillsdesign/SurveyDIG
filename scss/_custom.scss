@@ -210,16 +210,14 @@ option[selected] .select-paceholder {
   }
 }
 
-//.sd-submit-button {
-//  @include button(true, $foundation-palette(success), $foundation-palette(success), #fff, solid);
-//}
+.sd-submit-button {
+  margin-top: 1em !important;
+}
+
 
 .check-on-view  {
   color: $brand-primary;
 }
-//.switch {
-//  margin-bottom: 0 !important;
-//}
 
 .footer {
   margin-top: 2em;
