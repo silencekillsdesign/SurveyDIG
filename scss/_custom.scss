@@ -8,6 +8,7 @@ $topbar-background: $brand-primary;
 //Switch
 $switch-background-active: $brand-primary;
 $switch-margin: 0;
+//$switch-paddle-offset: 0;
 
 
 label, legend {
@@ -39,12 +40,11 @@ textarea, .dropdown {
   color: white;
 }
 
-// fix this
 .sd-course-info, .sd-prof-info {
   color: $brand-copy-light !important;
-  small {
-    color: darken($brand-copy-light, 10);
-  }
+//  small {
+//    color: darken($brand-copy-light, 10);
+//  }
 }
 
 .sd-profile-text {
@@ -56,7 +56,7 @@ textarea, .dropdown {
   margin-top: 2em;
 }
 
-.logo-header {
+.header-logo {
   padding: .5em;
 }
 
@@ -75,21 +75,41 @@ textarea, .dropdown {
   padding: .125em;
   & label {
     line-height: 1.25;
-//    vertical-align: baseline;
   }
   &:last-of-type {
     @include breakpoint(medium) {
       margin-right: 1em;
     }
+    // need to check this out for vertical radio label
+//    &.vertical label {
+//      margin: 0;
+//    }
   }
 }
 
-form > .question-row {
+.question-row  {
   padding: .5em 0;
-  &:nth-of-type(odd) {
+ &:nth-of-type(2n+3) {
     background: #f5f5f5;
+   +.text-header {
+     &:nth-of-type(2n+2) {
+       background: white;
+       }
+     }
+   }
   }
-}
+
+//.row +.text-header:nth-child(odd) {
+//  background: $brand-primary;
+//  + .question-row:nth-of-type(even) {
+//    background: lighten(red, 20);
+//    ~.question-row:nth-of-type(odd) {
+//      background: lighten(blue, 20);
+//    }
+//  }
+//}
+
+
 
 .required:after {
   display: inline;
@@ -102,8 +122,8 @@ form > .question-row {
 }
 
 .question-number {
-  padding-right: 0;
-  min-width: 8em;
+//  padding-right: 0;
+  width: 2.5em !important;
 }
 .question-description {
   padding-left: 0;
@@ -139,12 +159,13 @@ option[selected] .select-paceholder {
     margin: auto;
     height: 1.5em;
     width: 1.5em;
-    border: 2px solid dodgerblue;
+    border: 2px solid $brand-primary;
     background: white;
     border-radius: 50%;
+    @include breakpoint(medium)
   }
   &:checked:before {
-    background: dodgerblue;
+    background: $brand-primary;
   }
 }
 
@@ -153,70 +174,96 @@ option[selected] .select-paceholder {
   label {
     margin-left: 1.5rem;
   }
-  input[type=checkbox] {
+  input {
     position: relative;
     width: 0px;
     height: 0px;
-    top: 0;
     &:before {
       opacity: 1;
       content: "";
       position: absolute;
       display: block;
-      top: -1em;
+      top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      margin: .125em 0 0 .25em;
+      margin: auto;
       height: 1.5em;
       width: 1.5em;
-      border: 2px solid dodgerblue;
+      border: 2px solid $brand-primary;
       background: white;
       border-radius: 0;
     }
     &:checked:before {
-      background: dodgerblue;
-      content: "X";
-      text-indent: .175em;
+      background: $brand-primary;
+      content: "\2716"; //characters found at http://www.w3schools.com/charsets/ref_utf_dingbats.asp
+      text-indent: .2em;
       color: white;
+      line-height: 1.25;
     }
   }
-//  label[for] {
-//    margin-top: .125em;
-//    margin-left: 1.75em;
-//  }
 }
 
-.vertical-list {
+.vertical-list  {
   margin: 0;
+  margin-left: 2.25em !important;
   @extend .no-bullet;
-  li {
-    min-width: 100%;
-    label {
-      text-indent: 1em;
-      margin-left: 2em;
-//      float: left;
-    }
-  }
-  .styled-radio input[type=radio]:before {
+  .styled-radio input:before {
     left: 0;
-    bottom: .5em;
   }
-  .check-on-view {
-    float: left;
+//  .check-on-view {
+//    float: left;
+//  }
+  .response-label {
+    margin-left: 1em;
   }
   @include breakpoint(medium) {
-    margin-left: 0;
+    margin-left: 0 !important;
+    label {
+      margin-left: .5rem;
+    }
   }
+}
+
+.vertical-list-view {
+  margin-left: 0 !important;
+  text-indent: 0 !important;
 }
 
 .sd-submit-button {
   margin-top: 1em !important;
 }
 
+.switch {
+  margin: .375em 0 0 2.5em;
+  @include breakpoint(medium) {
+    margin: .375em 0 0 0em;
+  }
+}
 
-.check-on-view  {
+.switch-paddle {
+  margin-bottom: 0!important;
+}
+
+.check-on-view, .check-off-view  {
+//  color: $brand-primary;
+  font-size: 140%;
+  +.response-label {
+    margin-left: 0;
+  }
+//  &.row {
+//    min-height: 2em !important;
+//    min-width: 5rem; //workaround for final column on instructor supplied questions
+//    box-sizing: border-box;
+//    border: 1px solid black;
+//  }
+}
+
+.check-on-view {
   color: $brand-primary;
+}
+.check-off-view {
+  color: darken($brand-copy-light, 10);;
 }
 
 .footer {
