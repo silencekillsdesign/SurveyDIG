@@ -46,10 +46,15 @@ textarea, .dropdown {
   padding: .5em 0; }
   .text-header h5 {
     margin: .5em 0; }
+  .text-header .response {
+    font-size: 85%;
+    margin: .125em; }
+    @media screen and (min-width: 64em) {
+      .text-header .response {
+        font-size: 100%; } }
 
 .response {
-  max-width: 5em;
-  padding: .125em; }
+  max-width: 5em; }
   .response label {
     line-height: 1.25; }
   @media screen and (min-width: 45em) {
@@ -145,11 +150,15 @@ option[selected] .select-paceholder {
     left: 0; }
   .vertical-list .response-label {
     margin-left: 1em; }
+  .vertical-list li {
+    margin-left: .5em !important; }
   @media screen and (min-width: 45em) {
     .vertical-list {
       margin-left: 0 !important; }
       .vertical-list .response-label {
-        margin-left: .5rem; } }
+        margin-left: .5rem; }
+      .vertical-list li {
+        margin-left: 1em !important; } }
 
 .vertical-list-view {
   margin-left: 0 !important;

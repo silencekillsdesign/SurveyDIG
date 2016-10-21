@@ -69,11 +69,20 @@ textarea, .dropdown {
     // add rule to decrease size of font to 90% on devices medium or smaller
     margin: .5em 0;
   }
+  .response {
+    @include breakpoint(small) {
+      font-size: 85%;
+      margin: .125em;
+    }
+    @include breakpoint(large) {
+      font-size: 100%;
+    }
+  }
 }
 
 .response {
   max-width: 5em;
-  padding: .125em;
+//  padding: .125em;
   & label {
     line-height: 1.25;
   }
@@ -226,10 +235,16 @@ option[selected] .select-paceholder {
   .response-label {
     margin-left: 1em;
   }
+  li {
+    margin-left: .5em !important;
+  }
   @include breakpoint(medium) {
     margin-left: 0 !important;
     .response-label {
       margin-left: .5rem;
+    }
+    li {
+      margin-left: 1em !important;
     }
   }
 }
