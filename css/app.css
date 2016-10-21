@@ -140,7 +140,7 @@ option[selected] .select-paceholder {
 
 .vertical-list {
   margin: 0;
-  margin-left: 2.25em !important; }
+  margin-left: 1.5em !important; }
   .vertical-list .styled-radio input:before {
     left: 0; }
   .vertical-list .response-label {
@@ -148,7 +148,7 @@ option[selected] .select-paceholder {
   @media screen and (min-width: 45em) {
     .vertical-list {
       margin-left: 0 !important; }
-      .vertical-list label {
+      .vertical-list .response-label {
         margin-left: .5rem; } }
 
 .vertical-list-view {
@@ -177,6 +177,13 @@ option[selected] .select-paceholder {
 
 .check-off-view {
   color: #dedede; }
+
+.view-mode-label {
+  color: gray;
+  margin-bottom: 2em; }
+
+.question-group-section {
+  border: 1px solid coral; }
 
 .footer {
   margin-top: 2em;

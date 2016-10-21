@@ -66,6 +66,7 @@ textarea, .dropdown {
   line-height: 1.25;
   padding: .5em 0;
   h5 {
+    // add rule to decrease size of font to 90% on devices medium or smaller
     margin: .5em 0;
   }
 }
@@ -81,7 +82,7 @@ textarea, .dropdown {
       margin-right: 1em;
     }
     // need to check this out for vertical radio label
-//    &.vertical label {
+//    &.vertical-label {
 //      margin: 0;
 //    }
   }
@@ -214,7 +215,7 @@ option[selected] .select-paceholder {
 
 .vertical-list  {
   margin: 0;
-  margin-left: 2.25em !important;
+  margin-left: 1.5em !important;
   @extend .no-bullet;
   .styled-radio input:before {
     left: 0;
@@ -227,7 +228,7 @@ option[selected] .select-paceholder {
   }
   @include breakpoint(medium) {
     margin-left: 0 !important;
-    label {
+    .response-label {
       margin-left: .5rem;
     }
   }
@@ -271,7 +272,20 @@ option[selected] .select-paceholder {
   color: $brand-primary;
 }
 .check-off-view {
-  color: darken($brand-copy-light, 10);;
+  color: darken($brand-copy-light, 10);
+}
+
+.view-mode-label {
+  color: lighten(#000, 50);
+  margin-bottom: 2em;
+}
+//.view-response-text {
+//  font-family: ;
+//}
+
+//for debugging only
+.question-group-section {
+  border: 1px solid coral;
 }
 
 .footer {
