@@ -42,7 +42,7 @@ input, textarea {
   line-height: 1;
   padding: .5em 0; }
   .text-header .response {
-    font-size: 1.25rem !important; }
+    font-size: .875em !important; }
 
 .parent-group-desc {
   text-align: center;
@@ -55,8 +55,7 @@ input, textarea {
 .response {
   max-width: 5em;
   padding: 0 .25em;
-  margin: .125em;
-  font-size: 1rem; }
+  margin: .125em; }
   .response label {
     line-height: 1.25; }
   @media screen and (min-width: 45em) {
