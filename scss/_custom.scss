@@ -20,15 +20,18 @@ legend {
   margin-bottom: 0;
 }
 
-input {
-  &[type='text'], &[type='password'], &[type='date'], &[type='datetime'], &[type='datetime-local'], &[type='month'], &[type='week'], &[type='email'], &[type='number'], &[type='search'], &[type='tel'], &[type='time'], &[type='url'], &[type='color'] {
-    margin-bottom: 0;
-  }
+//input {
+//  &[type='text'], &[type='password'], &[type='date'], &[type='datetime'], &[type='datetime-local'], &[type='month'], &[type='week'], &[type='email'], &[type='number'], &[type='search'], &[type='tel'], &[type='time'], &[type='url'], &[type='color'] {
+//    margin-bottom: 0;
+//  }
+//}
+input, textarea {
+  margin-bottom: 0 !important;
 }
 
-textarea, .dropdown {
-  margin-bottom: 0;
-}
+//textarea, .dropdown {
+//  margin-bottom: 0;
+//}
 
 .container {
   max-width: 960px;
@@ -63,23 +66,28 @@ textarea, .dropdown {
 .text-header {
   background: $brand-primary;
   color: white;
-  line-height: 1.25;
+  line-height: 1;
   padding: .5em 0;
   h5 {
     // add rule to decrease size of font to 90% on devices medium or smaller
-    margin: .5em 0;
+//    margin: .5em 0;
+  }
+  .response {
+    font-size: 1.25rem !important;
   }
 }
 
 .response {
   max-width: 5em;
-  padding: .125em;
+  padding: 0 .25em;
+  margin: .125em;
+  font-size: 1rem;
   & label {
     line-height: 1.25;
   }
   &:last-of-type {
     @include breakpoint(medium) {
-      margin-right: 1em;
+      margin-right: .375rem;
     }
     // need to check this out for vertical radio label
 //    &.vertical-label {
@@ -140,7 +148,7 @@ textarea, .dropdown {
 }
 
 .response-label {
-  font-size: 70%;
+  font-size: 75%;
 //  line-height: 1.375;
 }
 
@@ -155,8 +163,13 @@ option[selected] .select-paceholder {
 
 .styled-radio input {
   position: relative;
-  width: 0px;
-  height: 0px;
+  width: 1.5em;
+  height: 1.5em;
+//  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   &:before {
     opacity: 1;
     content: '';
@@ -164,7 +177,8 @@ option[selected] .select-paceholder {
     top: 0;
     right: 0;
     bottom: 0;
-    left: -.75em;
+//    left: -.75em;
+    left: 0;
     margin: auto;
     height: 1.5em;
     width: 1.5em;
@@ -180,22 +194,23 @@ option[selected] .select-paceholder {
 
 .styled-checkbox {
   line-height: 1.25em;
-  label {
-    margin-left: 1.5rem;
-  }
+//  label {
+//    margin-left: 0;
+//  }
   input {
     position: relative;
-    width: 0px;
-    height: 0px;
+    height: 1.5em;
+    width: 1.5em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+//    left: 0;
     &:before {
       opacity: 1;
       content: "";
       position: absolute;
       display: block;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+
       margin: auto;
       height: 1.5em;
       width: 1.5em;
@@ -215,21 +230,28 @@ option[selected] .select-paceholder {
 
 .vertical-list  {
   margin: 0;
-  margin-left: 1.5em !important;
-  @extend .no-bullet;
-  .styled-radio input:before {
-    left: 0;
-  }
+  margin-left: 2em !important;
+//  .styled-radio input:before {
+//    left: 0;
+//  }
 //  .check-on-view {
 //    float: left;
 //  }
-  .response-label {
-    margin-left: 1em;
+  li {
+    @include flex-grid-row(nest, 100%, null, false, 0);
+    margin-bottom: .5em;
   }
+//  .response-label {
+//    margin-left: 0;
+//  }
   @include breakpoint(medium) {
-    margin-left: 0 !important;
+    margin-left: .75em !important;
+    padding-left: .125em;
+    .styled-radio {
+      margin-left: -.125em;
+    }
     .response-label {
-      margin-left: .5rem;
+      margin-left: 0;
     }
   }
 }
@@ -244,10 +266,7 @@ option[selected] .select-paceholder {
 }
 
 .switch {
-  margin: .375em 0 0 2.5em;
-  @include breakpoint(medium) {
-    margin: .375em 0 0 0em;
-  }
+  margin: .375em 0 0 -.125em;
 }
 
 .switch-paddle {
@@ -257,6 +276,7 @@ option[selected] .select-paceholder {
 .check-on-view, .check-off-view  {
 //  color: $brand-primary;
   font-size: 140%;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   +.response-label {
     margin-left: 0;
   }
