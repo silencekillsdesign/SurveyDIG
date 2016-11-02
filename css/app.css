@@ -22,12 +22,12 @@ input, textarea {
   background-color: dodgerblue;
   margin-bottom: 0;
   color: white; }
-
-.sd-course-info, .sd-prof-info {
-  color: #f7f7f7 !important; }
+  .top-bar .subheader {
+    color: #e6e6e6;
+    line-height: 1; }
 
 .sd-profile-text {
-  background: #f7f7f7; }
+  background: #f8f8f8; }
 
 .form-container {
   border: 2px solid dodgerblue;
@@ -39,7 +39,6 @@ input, textarea {
 .text-header {
   background: dodgerblue;
   color: white;
-  line-height: 1;
   padding: .5em 0; }
   .text-header .response {
     font-size: .875em !important; }
@@ -53,7 +52,7 @@ input, textarea {
   color: dodgerblue; }
 
 .response {
-  max-width: 5em;
+  max-width: 3em;
   padding: 0 .25em;
   margin: .125em; }
   .response label {
@@ -62,10 +61,107 @@ input, textarea {
     .response:last-of-type {
       margin-right: .375rem; } }
 
+.colored-likert--green {
+  color: #3adb76;
+  background: none !important; }
+  @media screen and (min-width: 45em) {
+    .colored-likert--green {
+      background: #3adb76 !important;
+      color: white;
+      display: inline-block;
+      padding: 0.33333rem 0.5rem;
+      font-size: 0.7rem;
+      line-height: 1;
+      border-radius: 0;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.colored-likert--darkgreen {
+  color: #1faa53;
+  background: none !important; }
+  @media screen and (min-width: 45em) {
+    .colored-likert--darkgreen {
+      background: #1faa53 !important;
+      color: white;
+      display: inline-block;
+      padding: 0.33333rem 0.5rem;
+      font-size: 0.7rem;
+      line-height: 1;
+      border-radius: 0;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.colored-likert--yellow {
+  color: #ffae00;
+  background: none !important; }
+  @media screen and (min-width: 45em) {
+    .colored-likert--yellow {
+      background: #ffae00 !important;
+      color: white;
+      display: inline-block;
+      padding: 0.33333rem 0.5rem;
+      font-size: 0.7rem;
+      line-height: 1;
+      border-radius: 0;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.colored-likert--red {
+  color: #ec5840;
+  background: none !important; }
+  @media screen and (min-width: 45em) {
+    .colored-likert--red {
+      background: #ec5840 !important;
+      color: white;
+      display: inline-block;
+      padding: 0.33333rem 0.5rem;
+      font-size: 0.7rem;
+      line-height: 1;
+      border-radius: 0;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.colored-likert--darkred {
+  color: #cb2e14;
+  background: none !important; }
+  @media screen and (min-width: 45em) {
+    .colored-likert--darkred {
+      background: #cb2e14 !important;
+      color: white;
+      display: inline-block;
+      padding: 0.33333rem 0.5rem;
+      font-size: 0.7rem;
+      line-height: 1;
+      border-radius: 0;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.colored-likert--gray {
+  color: #cacaca;
+  background: none !important; }
+  @media screen and (min-width: 45em) {
+    .colored-likert--gray {
+      background: #cacaca !important;
+      color: white;
+      display: inline-block;
+      padding: 0.33333rem 0.5rem;
+      font-size: 0.7rem;
+      line-height: 1;
+      border-radius: 0;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
 .question-row {
   padding: .5em 0; }
   .question-row:nth-of-type(even) {
     background: #f5f5f5; }
+
+.question {
+  line-height: 1;
+  margin-bottom: 1em; }
+  @media screen and (min-width: 45em) {
+    .question {
+      margin-bottom: 0; } }
 
 .required:after {
   display: inline;
@@ -110,8 +206,6 @@ option[selected] .select-paceholder {
     bottom: 0;
     left: 0;
     margin: auto;
-    height: 1.5em;
-    width: 1.5em;
     border: 2px solid dodgerblue;
     background: white;
     border-radius: 50%; }
@@ -128,20 +222,19 @@ option[selected] .select-paceholder {
     right: 0;
     bottom: 0; }
     .styled-checkbox input:before {
+      font-family: FontAwesome;
+      content: "\f096";
       opacity: 1;
-      content: "";
       position: absolute;
       display: block;
-      margin: auto;
       height: 1.5em;
       width: 1.5em;
       border: 2px solid dodgerblue;
       background: white;
       border-radius: 0; }
     .styled-checkbox input:checked:before {
-      background: dodgerblue;
-      content: "\2716";
-      text-indent: .2em;
+      text-indent: .25em;
+      content: "\f14a";
       color: white;
       line-height: 1.25; }
 
@@ -170,7 +263,8 @@ option[selected] .select-paceholder {
   margin-top: 1em !important; }
 
 .switch {
-  margin: .375em 0 0 -.125em; }
+  margin: .375em 0 0 -.125em;
+  background: #3adb76; }
 
 .switch-paddle {
   margin-bottom: 0 !important; }
