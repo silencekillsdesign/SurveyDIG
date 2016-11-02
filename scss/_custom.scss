@@ -97,6 +97,16 @@ input, textarea {
   }
 }
 
+.response-label {
+  @include breakpoint(medium) {
+    position: absolute !important;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
 .parent-group-desc {
   text-align: center;
   margin: 1em 0;
@@ -107,10 +117,11 @@ input, textarea {
 }
 
 .response {
-  min-width: 4em;
-  max-width: 8em;
+  box-sizing: border-box;
+//  min-width: 4em;
+  max-width: 4em;
   padding: 0 .25em;
-  margin: .125em;
+//  margin: .125em;
   font-size: 1rem;
   line-height: 1;
   & label {
@@ -119,6 +130,9 @@ input, textarea {
   &:last-of-type {
     @include breakpoint(medium) {
       margin-right: .375rem;
+      align-self: flex-end;
+      align-content: flex-end;
+      align-items: flex-end;
     }
     // need to check this out for vertical radio label
 //    &.vertical-label {
@@ -253,47 +267,50 @@ option[selected] .select-paceholder {
 }
 
 .styled-checkbox {
-  line-height: 1.25em;
-//  label {
-//    margin-left: 0;
-//  }
+//  line-height: 1;
+  color: $brand-primary;
+  box-sizing: border-box;
   input {
-
+    font-family: FontAwesome;
     position: relative;
-    height: 1.5em;
-    width: 1.5em;
+    height: 1.25rem;
+    width: 1.25rem;
     top: 0;
     right: 0;
     bottom: 0;
-//    left: 0;
+    left: 0;
+//    @include absolute-center;
     &:before {
-      font-family: FontAwesome;
       content: "\f096";
-      opacity: 1;
+      font-size: 2em;
+//      opacity: 1;
+//      @include absolute-center;
 //      content: "";
-      position: absolute;
-      display: block;
+//      position: absolute;
+//      display: block;
 //      margin: auto;
-      height: 1.5em;
-      width: 1.5em;
-      border: 2px solid $brand-primary;
+//      border: 2px solid $brand-primary;
       background: white;
-      border-radius: 0;
+//      border-radius: .25em;
     }
     &:checked:before {
 //      background: $brand-primary;
 //      content: "\2716"; //characters found at http://www.w3schools.com/charsets/ref_utf_dingbats.asp
-      text-indent: .25em;
-      content: "\f14a";
-      color: white;
-      line-height: 1.25;
+//      text-indent: .25em;
+      content: "\f14a ";
+      font-size: 1.875em;
+//      color: white;
+//      line-height: 1.25;
+//      background: white;
     }
   }
 }
 
+
+
 .vertical-list  {
   margin: 0;
-  margin-left: 2em !important;
+//  margin-left: 2em !important;
 //  .styled-radio input:before {
 //    left: 0;
 //  }
@@ -301,14 +318,14 @@ option[selected] .select-paceholder {
 //    float: left;
 //  }
   li {
-    @include flex-grid-row(nest, 100%, null, false, 0);
+//    @include flex-grid-row(nest, 100%, null, false, 0);
     margin-bottom: .5em;
   }
 //  .response-label {
 //    margin-left: 0;
 //  }
   @include breakpoint(medium) {
-    margin-left: .75em !important;
+//    margin-left: .75em !important;
     padding-left: .125em;
     .styled-radio {
       margin-left: -.125em;

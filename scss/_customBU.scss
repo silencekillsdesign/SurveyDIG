@@ -1,9 +1,43 @@
+//functions
+// Call the color palette modifiers in color values
+//@function theme($color) {
+//  @return map-get($color, $likert-color);
+//}
+
+// mixins
+// BEM selectors mixin
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+//variables
+$likert-colors: (
+  green: map-get($foundation-palette, success),
+  darkgreen: darken(map-get($foundation-palette, success), 15),
+  yellow: map-get($foundation-palette, warning),
+  red: map-get($foundation-palette, alert),
+  darkred: darken(map-get($foundation-palette, alert), 15),
+  gray: $medium-gray
+);
+
 $brand-primary: dodgerblue;
 $brand-secondary: blueviolet;
 $brand-copy: #495058;
 $brand-copy-light: #f7f7f7;
 
 $topbar-background: $brand-primary;
+
+//Switch
+$switch-background-active: $brand-primary;
+$switch-margin: 0;
+//$switch-paddle-offset: 0;
 
 
 label, legend {
@@ -13,38 +47,30 @@ label, legend {
 
 legend {
   margin-bottom: 0;
+//  color: map-get($foundation-palette, success);
 }
 
-input {
-  &[type='text'], &[type='password'], &[type='date'], &[type='datetime'], &[type='datetime-local'], &[type='month'], &[type='week'], &[type='email'], &[type='number'], &[type='search'], &[type='tel'], &[type='time'], &[type='url'], &[type='color'] {
-    margin-bottom: 0;
-  }
+input, textarea {
+  margin-bottom: 0 !important;
 }
 
-textarea, .dropdown {
-  margin-bottom: 0;
-}
-
-.container {
-  max-width: 960px;
-}
+//.container {
+//  max-width: 960px;
+//}
 
 .top-bar {
   background-color: $brand-primary;
   margin-bottom: 0;
   color: white;
-}
-
-// fix this
-.sd-course-info, .sd-prof-info {
-  color: $brand-copy-light !important;
-  small {
-    color: darken($brand-copy-light, 10);
+  .subheader {
+    color: $light-gray;
+    line-height: 1;
   }
 }
 
 .sd-profile-text {
-  background: $brand-copy-light;
+  background: lighten($light-gray, 7);
+//  box-shadow: 0 3px 3px rgba(0,0,0,.5);
 }
 
 .form-container {
@@ -52,42 +78,115 @@ textarea, .dropdown {
   margin-top: 2em;
 }
 
-.logo-header {
+.header-logo {
   padding: .5em;
 }
 
 .text-header {
   background: $brand-primary;
   color: white;
-  line-height: 1.25;
+  line-height: 1;
   padding: .5em 0;
-  .response {
-    border-left: none;
-  }
   h5 {
-    margin: .5em 0;
+    // add rule to decrease size of font to 90% on devices medium or smaller
+//    margin: .5em 0;
   }
+  .response {
+//    max-width: 7em;
+    font-size: .875em !important;
+  }
+}
+
+.parent-group-desc {
+  text-align: center;
+  margin: 1em 0;
+  padding-top: 1em;
+  font-size: 1.5em;
+  border-top: 1px solid lightgray;
+  color: $brand-primary;
 }
 
 .response {
-  max-width: 5em;
-  padding: .125em;
+  min-width: 4em;
+  max-width: 8em;
+  padding: 0 .25em;
+  margin: .125em;
+  font-size: 1rem;
+  line-height: 1;
   & label {
     line-height: 1.25;
-    vertical-align: baseline;
+  }
+  &:last-of-type {
+    @include breakpoint(medium) {
+      margin-right: .375rem;
+    }
+    // need to check this out for vertical radio label
+//    &.vertical-label {
+//      margin: 0;
+//    }
   }
 }
 
-.question-row {
-  padding: .5em 0;
+.colored-likert {
+  @each $color, $likert-color in $likert-colors {
+  &--#{$color} {
+    color: $likert-color;
+    background: none !important;
+    @include breakpoint(medium) {
+      background: $likert-color !important;
+      color: white;
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+//      margin: -.5rem;
+      font-size: .9em;
+      line-height: 1;
+//      white-space: normal;
+//      cursor: default;
+      border-radius: 0;
+      flex-wrap: wrap;
+      }
+    }
+  }
 }
 
-.question-row {
+.question-row  {
   padding: .5em 0;
-  &:nth-child(odd) {
+  &:nth-of-type(even) {
     background: #f5f5f5;
   }
 }
+.question {
+  line-height: 1;
+  margin-bottom: 1em;
+  @include breakpoint(medium) {
+    margin-bottom: 0;
+  }
+}
+
+
+//.question-row  {
+//  padding: .5em 0;
+// &:nth-of-type(2n+3) {
+//    background: #f5f5f5;
+//   +.text-header {
+//     &:nth-of-type(2n+2) {
+//       background: white;
+//       }
+//     }
+//   }
+//  }
+
+//.row +.text-header:nth-child(odd) {
+//  background: $brand-primary;
+//  + .question-row:nth-of-type(even) {
+//    background: lighten(red, 20);
+//    ~.question-row:nth-of-type(odd) {
+//      background: lighten(blue, 20);
+//    }
+//  }
+//}
+
+
 
 .required:after {
   display: inline;
@@ -100,8 +199,8 @@ textarea, .dropdown {
 }
 
 .question-number {
-  padding-right: 0;
-  min-width: 8em;
+//  padding-right: 0;
+  width: 2.5em !important;
 }
 .question-description {
   padding-left: 0;
@@ -109,7 +208,7 @@ textarea, .dropdown {
 }
 
 .response-label {
-  font-size: 70%;
+  font-size: 75%;
 //  line-height: 1.375;
 }
 
@@ -122,10 +221,15 @@ option[selected] .select-paceholder {
   color: #cacaca !important;
 }
 
-.styled-radio input[type=radio] {
+.styled-radio input {
   position: relative;
-  width: 0px;
-  height: 0px;
+  width: 1.5em;
+  height: 1.5em;
+//  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   &:before {
     opacity: 1;
     content: '';
@@ -133,97 +237,141 @@ option[selected] .select-paceholder {
     top: 0;
     right: 0;
     bottom: 0;
-    left: -.75em;
+//    left: -.75em;
+    left: 0;
     margin: auto;
-    height: 1.5em;
-    width: 1.5em;
-    border: 2px solid dodgerblue;
+//    height: 1.5em;
+//    width: 1.5em;
+    border: 2px solid $brand-primary;
     background: white;
     border-radius: 50%;
+    @include breakpoint(medium)
   }
   &:checked:before {
-    background: dodgerblue;
+    background: $brand-primary;
   }
 }
 
 .styled-checkbox {
   line-height: 1.25em;
-  label {
-    margin-left: 1.5rem;
-  }
-  input[type=checkbox] {
+//  label {
+//    margin-left: 0;
+//  }
+  input {
+
     position: relative;
-    width: 0px;
-    height: 0px;
+    height: 1.5em;
+    width: 1.5em;
     top: 0;
+    right: 0;
+    bottom: 0;
+//    left: 0;
     &:before {
+      font-family: FontAwesome;
+      content: "\f096";
       opacity: 1;
-      content: "";
+//      content: "";
       position: absolute;
       display: block;
-      top: -1em;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: .125em 0 0 0;
-      height: 1.375em;
-      width: 1.375em;
-      border: 2px solid dodgerblue;
+//      margin: auto;
+      height: 1.5em;
+      width: 1.5em;
+      border: 2px solid $brand-primary;
       background: white;
       border-radius: 0;
     }
     &:checked:before {
-      background: dodgerblue;
-      content: "X";
-      text-indent: .175em;
+//      background: $brand-primary;
+//      content: "\2716"; //characters found at http://www.w3schools.com/charsets/ref_utf_dingbats.asp
+      text-indent: .25em;
+      content: "\f14a";
       color: white;
+      line-height: 1.25;
     }
-  }
-  label[for] {
-    margin-top: .125em;
-    margin-left: 1.75em;
   }
 }
 
-.vertical-list {
+
+
+.vertical-list  {
   margin: 0;
-  margin-left: 2.5em;
-  @include flex-align(spaced, stretch);
-  li {
-    display: inline-block;
-    min-width: 100%;
-    label {
-      text-indent: 1em;
-      margin-left: 2em;
-    }
-  }
-  .styled-radio input[type=radio]:before {
-    left: 0;
-    bottom: .5em;
-  }
-  @include breakpoint(medium) {
-    margin-left: 0;
-  }
-  .check-on-view {
-    display: inline-block;
-    width: auto;
-    + label {
-      margin: -1.75em 0 0 1.75em;
-    }
-  }
-//  .response-label {
-//    display: inline-block;
+  margin-left: 2em !important;
+//  .styled-radio input:before {
+//    left: 0;
+//  }
+//  .check-on-view {
 //    float: left;
 //  }
+  li {
+    @include flex-grid-row(nest, 100%, null, false, 0);
+    margin-bottom: .5em;
+  }
+//  .response-label {
+//    margin-left: 0;
+//  }
+  @include breakpoint(medium) {
+    margin-left: .75em !important;
+    padding-left: .125em;
+    .styled-radio {
+      margin-left: -.125em;
+    }
+    .response-label {
+      margin-left: 0;
+    }
+  }
+}
+
+.vertical-list-view {
+  margin-left: 0 !important;
+  text-indent: 0 !important;
 }
 
 .sd-submit-button {
-  margin-top: 1em;
+  margin-top: 1em !important;
+}
+
+.switch {
+  margin: .375em 0 0 -.125em;
+//  background: map-get($foundation-palette, success);
+}
+
+.switch-paddle {
+  margin-bottom: 0!important;
+}
+
+.check-on-view, .check-off-view  {
+//  color: $brand-primary;
+  font-size: 140%;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  +.response-label {
+    margin-left: 0;
+  }
+//  &.row {
+//    min-height: 2em !important;
+//    min-width: 5rem; //workaround for final column on instructor supplied questions
+//    box-sizing: border-box;
+//    border: 1px solid black;
+//  }
 }
 
 .check-on-view {
   color: $brand-primary;
-  flex-shrink: 1;
+}
+.check-off-view {
+  color: darken($brand-copy-light, 10);
+}
+
+.view-mode-label {
+  color: lighten(#000, 50);
+  margin-bottom: 2em;
+}
+//.view-response-text {
+//  font-family: ;
+//}
+
+//for debugging only
+.question-group-section {
+  border: 1px solid coral;
 }
 
 .footer {
