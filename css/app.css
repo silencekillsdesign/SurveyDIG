@@ -54,7 +54,8 @@ input, textarea {
   max-width: 8em;
   padding: 0 .25em;
   margin: .125em;
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1; }
   .response label {
     line-height: 1.25; }
   @media screen and (min-width: 45em) {
@@ -69,8 +70,8 @@ input, textarea {
       background: #3adb76 !important;
       color: white;
       display: inline-block;
-      padding: 0.33333rem 0.5rem;
-      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      font-size: .9em;
       line-height: 1;
       border-radius: 0;
       -ms-flex-wrap: wrap;
@@ -84,8 +85,8 @@ input, textarea {
       background: #1faa53 !important;
       color: white;
       display: inline-block;
-      padding: 0.33333rem 0.5rem;
-      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      font-size: .9em;
       line-height: 1;
       border-radius: 0;
       -ms-flex-wrap: wrap;
@@ -99,8 +100,8 @@ input, textarea {
       background: #ffae00 !important;
       color: white;
       display: inline-block;
-      padding: 0.33333rem 0.5rem;
-      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      font-size: .9em;
       line-height: 1;
       border-radius: 0;
       -ms-flex-wrap: wrap;
@@ -114,8 +115,8 @@ input, textarea {
       background: #ec5840 !important;
       color: white;
       display: inline-block;
-      padding: 0.33333rem 0.5rem;
-      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      font-size: .9em;
       line-height: 1;
       border-radius: 0;
       -ms-flex-wrap: wrap;
@@ -129,8 +130,8 @@ input, textarea {
       background: #cb2e14 !important;
       color: white;
       display: inline-block;
-      padding: 0.33333rem 0.5rem;
-      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      font-size: .9em;
       line-height: 1;
       border-radius: 0;
       -ms-flex-wrap: wrap;
@@ -144,8 +145,8 @@ input, textarea {
       background: #cacaca !important;
       color: white;
       display: inline-block;
-      padding: 0.33333rem 0.5rem;
-      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      font-size: .9em;
       line-height: 1;
       border-radius: 0;
       -ms-flex-wrap: wrap;

@@ -112,6 +112,7 @@ input, textarea {
   padding: 0 .25em;
   margin: .125em;
   font-size: 1rem;
+  line-height: 1;
   & label {
     line-height: 1.25;
   }
@@ -135,9 +136,9 @@ input, textarea {
       background: $likert-color !important;
       color: white;
       display: inline-block;
-      padding: 0.33333rem 0.5rem;
+      padding: 0.25rem 0.5rem;
 //      margin: -.5rem;
-      font-size: 0.7rem;
+      font-size: .9em;
       line-height: 1;
 //      white-space: normal;
 //      cursor: default;
