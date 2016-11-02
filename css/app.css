@@ -15,9 +15,6 @@ legend {
 input, textarea {
   margin-bottom: 0 !important; }
 
-.container {
-  max-width: 960px; }
-
 .top-bar {
   background-color: dodgerblue;
   margin-bottom: 0;
@@ -39,6 +36,7 @@ input, textarea {
 .text-header {
   background: dodgerblue;
   color: white;
+  line-height: 1;
   padding: .5em 0; }
   .text-header .response {
     font-size: .875em !important; }
@@ -52,9 +50,11 @@ input, textarea {
   color: dodgerblue; }
 
 .response {
-  max-width: 3em;
+  min-width: 4em;
+  max-width: 8em;
   padding: 0 .25em;
-  margin: .125em; }
+  margin: .125em;
+  font-size: 1rem; }
   .response label {
     line-height: 1.25; }
   @media screen and (min-width: 45em) {
