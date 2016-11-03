@@ -4,6 +4,20 @@
 //  @return map-get($color, $likert-color);
 //}
 
+$font-path: "../fonts/foundation-icons/foundation-icons";
+@font-face {
+  font-family: "foundation-icons";
+  src: url("#{$font-path}.eot");
+  src: url("#{$font-path}.eot?#iefix") format("embedded-opentype"),
+       url("#{$font-path}.woff") format("woff"),
+       url("#{$font-path}.ttf") format("truetype"),
+       url("#{$font-path}.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import "../etc/fonts/foundation-icons/foundation-icons.css";
+
 // mixins
 // BEM selectors mixin
 @mixin e($element) {
@@ -39,7 +53,12 @@ $switch-background-active: $brand-primary;
 $switch-margin: 0;
 //$switch-paddle-offset: 0;
 
-
+fieldset {
+  @extend .row;
+  padding: .5em 0 !important;
+  max-width: 100% ;
+  margin: 0 !important;
+}
 label, legend {
   font-size: .875em;
   margin: 0;
@@ -98,13 +117,15 @@ input, textarea {
 }
 
 .response-label {
-  @include breakpoint(medium) {
-    position: absolute !important;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-  }
+//  @extend .show-for-small-only;
+//  @extend .show-for-sr;
+//  @include breakpoint(medium) {
+//    position: absolute !important;
+//    width: 0;
+//    height: 0;
+//    overflow: hidden;
+//    clip: rect(0, 0, 0, 0);
+//  }
 }
 
 .parent-group-desc {
@@ -265,48 +286,80 @@ option[selected] .select-paceholder {
     background: $brand-primary;
   }
 }
+//
+//.styled-checkbox {
+////  line-height: 1;
+//  color: $brand-primary;
+//  box-sizing: border-box;
+//  input {
+//    font-family: FontAwesome;
+//    position: relative;
+//    height: 1.25rem;
+//    width: 1.25rem;
+//    top: 0;
+//    right: 0;
+//    bottom: 0;
+//    left: 0;
+////    @include absolute-center;
+//    &:before {
+//      content: "\f096";
+//      font-size: 2em;
+////      opacity: 1;
+////      @include absolute-center;
+////      content: "";
+////      position: absolute;
+////      display: block;
+////      margin: auto;
+////      border: 2px solid $brand-primary;
+//      background: white;
+////      border-radius: .25em;
+//    }
+//    &:checked:before {
+////      background: $brand-primary;
+////      content: "\2716"; //characters found at http://www.w3schools.com/charsets/ref_utf_dingbats.asp
+////      text-indent: .25em;
+//      content: "\f14a ";
+//      font-size: 1.875em;
+////      color: white;
+////      line-height: 1.25;
+////      background: white;
+//    }
+//  }
+//}
 
-.styled-checkbox {
-//  line-height: 1;
-  color: $brand-primary;
-  box-sizing: border-box;
-  input {
-    font-family: FontAwesome;
+.styled-checkbox input {
     position: relative;
-    height: 1.25rem;
-    width: 1.25rem;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-//    @include absolute-center;
+    height: 1.5em;
+    width: 1.5em;
+//    top: 0;
+//    right: 0;
+//    bottom: 0;
+//    left: 0;
+//    @include vertical-center;
     &:before {
-      content: "\f096";
-      font-size: 2em;
-//      opacity: 1;
-//      @include absolute-center;
+      @include vertical-center;
+      font-family: FontAwesome;
+      content: "";
+      opacity: 1;
 //      content: "";
-//      position: absolute;
-//      display: block;
+      position: absolute;
+      display: block;
 //      margin: auto;
-//      border: 2px solid $brand-primary;
+      height: 1.5em;
+      width: 1.5em;
+      border: 2px solid $brand-primary;
       background: white;
-//      border-radius: .25em;
+      border-radius: .25em;
     }
     &:checked:before {
-//      background: $brand-primary;
+      background: $brand-primary;
 //      content: "\2716"; //characters found at http://www.w3schools.com/charsets/ref_utf_dingbats.asp
-//      text-indent: .25em;
-      content: "\f14a ";
-      font-size: 1.875em;
-//      color: white;
-//      line-height: 1.25;
-//      background: white;
+      text-indent: .125em;
+      content: "\f00c";
+      color: white;
+      line-height: 1.25;
     }
   }
-}
-
-
 
 .vertical-list  {
   margin: 0;
