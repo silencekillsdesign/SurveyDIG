@@ -5,19 +5,6 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
-@import url(../etc/fonts/foundation-icons/foundation-icons.css);
-@font-face {
-  font-family: "foundation-icons";
-  src: url("../fonts/foundation-icons/foundation-icons.eot");
-  src: url("../fonts/foundation-icons/foundation-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/foundation-icons/foundation-icons.woff") format("woff"), url("../fonts/foundation-icons/foundation-icons.ttf") format("truetype"), url("../fonts/foundation-icons/foundation-icons.svg#fontcustom") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-fieldset {
-  padding: .5em 0 !important;
-  max-width: 100%;
-  margin: 0 !important; }
-
 label, legend {
   font-size: .875em;
   margin: 0; }
@@ -53,6 +40,14 @@ input, textarea {
   padding: .5em 0; }
   .text-header .response {
     font-size: .875em !important; }
+
+@media screen and (min-width: 45em) {
+  .response-label {
+    position: absolute !important;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); } }
 
 .parent-group-desc {
   text-align: center;
@@ -240,16 +235,12 @@ option[selected] .select-paceholder {
     text-indent: .125em;
     line-height: 1.25; }
 
-.styled-checkbox input {
-  position: relative;
-  height: 1.5em;
-  width: 1.5em; }
-  .styled-checkbox input:before {
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+.styled-checkbox {
+  color: dodgerblue;
+  box-sizing: border-box; }
+  .styled-checkbox input {
     font-family: FontAwesome;
+<<<<<<< HEAD
     content: "";
     opacity: 1;
     position: absolute;
@@ -265,6 +256,22 @@ option[selected] .select-paceholder {
     content: "\f00c";
     color: white;
     line-height: 1.25; }
+=======
+    position: relative;
+    height: 1.25rem;
+    width: 1.25rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    .styled-checkbox input:before {
+      content: "\f096";
+      font-size: 2em;
+      background: white; }
+    .styled-checkbox input:checked:before {
+      content: "\f14a ";
+      font-size: 1.875em; }
+>>>>>>> parent of 6088e97... css revision
 
 .vertical-list {
   margin: 0; }
@@ -752,7 +759,7 @@ button {
 .is-hidden {
   display: none !important; }
 
-.row, fieldset {
+.row {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
@@ -760,17 +767,17 @@ button {
   display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap; }
-  .row .row, fieldset .row, .row fieldset, fieldset fieldset {
+  .row .row {
     max-width: none;
     margin-left: -0.625rem;
     margin-right: -0.625rem; }
     @media screen and (min-width: 45em) {
-      .row .row, fieldset .row, .row fieldset, fieldset fieldset {
+      .row .row {
         margin-left: -0.9375rem;
         margin-right: -0.9375rem; } }
-  .row.expanded, fieldset.expanded {
+  .row.expanded {
     max-width: none; }
-  .row.collapse > .column, fieldset.collapse > .column, .row.collapse > .columns, fieldset.collapse > .columns {
+  .row.collapse > .column, .row.collapse > .columns {
     padding-left: 0;
     padding-right: 0; }
 
@@ -785,10 +792,10 @@ button {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
 
-.column.row.row, fieldset.column, fieldset.columns, .row.row.columns {
+.column.row.row, .row.row.columns {
   float: none;
   display: block; }
-  .row .column.row.row, fieldset .column.row.row, .row fieldset.column, fieldset fieldset.column, .row fieldset.columns, fieldset fieldset.columns, .row .row.row.columns, fieldset .row.row.columns {
+  .row .column.row.row, .row .row.row.columns {
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
@@ -1139,11 +1146,11 @@ button {
     -ms-flex: 1 1 0px;
         flex: 1 1 0px; } }
 
-.row.medium-unstack > .column, fieldset.medium-unstack > .column, .row.medium-unstack > .columns, fieldset.medium-unstack > .columns {
+.row.medium-unstack > .column, .row.medium-unstack > .columns {
   -ms-flex: 0 0 100%;
       flex: 0 0 100%; }
   @media screen and (min-width: 45em) {
-    .row.medium-unstack > .column, fieldset.medium-unstack > .column, .row.medium-unstack > .columns, fieldset.medium-unstack > .columns {
+    .row.medium-unstack > .column, .row.medium-unstack > .columns {
       -ms-flex: 1 1 0px;
           flex: 1 1 0px; } }
 
@@ -1308,11 +1315,11 @@ button {
     -ms-flex: 1 1 0px;
         flex: 1 1 0px; } }
 
-.row.large-unstack > .column, fieldset.large-unstack > .column, .row.large-unstack > .columns, fieldset.large-unstack > .columns {
+.row.large-unstack > .column, .row.large-unstack > .columns {
   -ms-flex: 0 0 100%;
       flex: 0 0 100%; }
   @media screen and (min-width: 64em) {
-    .row.large-unstack > .column, fieldset.large-unstack > .column, .row.large-unstack > .columns, fieldset.large-unstack > .columns {
+    .row.large-unstack > .column, .row.large-unstack > .columns {
       -ms-flex: 1 1 0px;
           flex: 1 1 0px; } }
 
