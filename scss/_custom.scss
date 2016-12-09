@@ -5,6 +5,7 @@
 //}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $font-path: "../fonts/foundation-icons/foundation-icons";
 @font-face {
 	font-family: "foundation-icons";
@@ -19,6 +20,8 @@ $font-path: "../fonts/foundation-icons/foundation-icons";
 
 @import "../etc/fonts/foundation-icons/foundation-icons.css";
 
+=======
+>>>>>>> parent of 6088e97... css revision
 =======
 >>>>>>> parent of 6088e97... css revision
 // mixins
@@ -62,6 +65,7 @@ $switch-margin: 0;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 fieldset, .field-row {
 	@extend .row;
 	padding: 0 0 !important;
@@ -69,6 +73,8 @@ fieldset, .field-row {
 	margin: 0 !important;
 		color: red !important;
 }
+=======
+>>>>>>> parent of 6088e97... css revision
 =======
 >>>>>>> parent of 6088e97... css revision
 label, legend {
@@ -295,6 +301,7 @@ option[selected] .select-paceholder {
 		margin: auto;
 //    height: 1.5em;
 //    width: 1.5em;
+<<<<<<< HEAD
 		border: 2px solid $brand-primary;
 		background: white;
 		border-radius: 50%;
@@ -344,6 +351,18 @@ option[selected] .select-paceholder {
 		}
 	}
 =======
+=======
+    border: 2px solid $brand-primary;
+    background: white;
+    border-radius: 50%;
+    @include breakpoint(medium)
+  }
+  &:checked:before {
+    background: $brand-primary;
+  }
+}
+
+>>>>>>> parent of 6088e97... css revision
 .styled-checkbox {
 //  line-height: 1;
   color: $brand-primary;
@@ -385,6 +404,9 @@ option[selected] .select-paceholder {
 }
 
 
+<<<<<<< HEAD
+>>>>>>> parent of 6088e97... css revision
+=======
 >>>>>>> parent of 6088e97... css revision
 
 .vertical-list  {

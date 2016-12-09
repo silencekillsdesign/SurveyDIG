@@ -241,6 +241,7 @@ option[selected] .select-paceholder {
   .styled-checkbox input {
     font-family: FontAwesome;
 <<<<<<< HEAD
+<<<<<<< HEAD
     content: "";
     opacity: 1;
     position: absolute;
@@ -257,6 +258,8 @@ option[selected] .select-paceholder {
     color: white;
     line-height: 1.25; }
 =======
+=======
+>>>>>>> parent of 6088e97... css revision
     position: relative;
     height: 1.25rem;
     width: 1.25rem;
@@ -271,6 +274,9 @@ option[selected] .select-paceholder {
     .styled-checkbox input:checked:before {
       content: "\f14a ";
       font-size: 1.875em; }
+<<<<<<< HEAD
+>>>>>>> parent of 6088e97... css revision
+=======
 >>>>>>> parent of 6088e97... css revision
 
 .vertical-list {
