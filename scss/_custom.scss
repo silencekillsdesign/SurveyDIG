@@ -4,10 +4,6 @@
 //  @return map-get($color, $likert-color);
 //}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 $font-path: "../fonts/foundation-icons/foundation-icons";
 @font-face {
 	font-family: "foundation-icons";
@@ -22,14 +18,6 @@ $font-path: "../fonts/foundation-icons/foundation-icons";
 
 @import "../etc/fonts/foundation-icons/foundation-icons.css";
 
-=======
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
 // mixins
 // BEM selectors mixin
 @mixin e($element) {
@@ -70,10 +58,6 @@ $switch-margin: 0;
 //$switch-paddle-offset: 0;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 fieldset, .field-row {
 	@extend .row;
 	padding: 0 0 !important;
@@ -81,14 +65,7 @@ fieldset, .field-row {
 	margin: 0 !important;
 		color: red !important;
 }
-=======
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
+
 label, legend {
 	font-size: .875em;
 	margin: 0;
@@ -169,7 +146,7 @@ input, textarea, select {
 .response {
 	box-sizing: border-box;
 //  min-width: 4em;
-	max-width: 4em;
+//	max-width: 4em;
 	padding: 0 .25em;
 //  margin: .125em;
 	font-size: 1rem;
@@ -178,7 +155,7 @@ input, textarea, select {
 		line-height: 1.25;
 	}
 	i {
-		color: $brand-primary;
+		color: red;
 	}
 	&:last-of-type {
 		@include breakpoint(medium) {
@@ -273,7 +250,7 @@ input, textarea, select {
 .question-description {
 	padding-left: 0;
 	margin-left: 0;
-	line-height: 1.5;
+	line-height: 1.5em !important;
 }
 
 .response-label {
@@ -313,7 +290,6 @@ option[selected] .select-paceholder {
 		margin: auto;
 //    height: 1.5em;
 //    width: 1.5em;
-<<<<<<< HEAD
 		border: 2px solid $brand-primary;
 		background: white;
 		border-radius: 50%;
@@ -328,7 +304,6 @@ option[selected] .select-paceholder {
 	}
 }
 
-<<<<<<< HEAD
 .styled-checkbox input {
 		position: relative;
 		height: 1.5em;
@@ -361,26 +336,14 @@ option[selected] .select-paceholder {
 			color: white;
 			line-height: 1.25;
 		}
-	}
-=======
-=======
     border: 2px solid $brand-primary;
     background: white;
     border-radius: 50%;
     @include breakpoint(medium)
-  }
   &:checked:before {
     background: $brand-primary;
   }
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
 .styled-checkbox {
 //  line-height: 1;
   color: $brand-primary;
@@ -421,17 +384,6 @@ option[selected] .select-paceholder {
   }
 }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
-=======
->>>>>>> parent of 6088e97... css revision
 
 .vertical-list  {
 	margin: 0;
