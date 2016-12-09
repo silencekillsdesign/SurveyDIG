@@ -29,7 +29,7 @@ input, textarea {
   margin-bottom: 0 !important; }
 
 .top-bar {
-  background-color: dodgerblue;
+  background-color: #004730;
   margin-bottom: 0;
   color: white; }
   .top-bar .subheader {
@@ -40,14 +40,14 @@ input, textarea {
   background: #f8f8f8; }
 
 .form-container {
-  border: 2px solid dodgerblue;
+  border: 2px solid #004730;
   margin-top: 2em; }
 
 .header-logo {
   padding: .5em; }
 
 .text-header {
-  background: dodgerblue;
+  background: #004730;
   color: white;
   line-height: 1;
   padding: .5em 0; }
@@ -60,7 +60,7 @@ input, textarea {
   padding-top: 1em;
   font-size: 1.5em;
   border-top: 1px solid lightgray;
-  color: dodgerblue; }
+  color: #004730; }
 
 .response {
   box-sizing: border-box;
@@ -70,6 +70,8 @@ input, textarea {
   line-height: 1; }
   .response label {
     line-height: 1.25; }
+  .response i {
+    color: #004730; }
   @media screen and (min-width: 45em) {
     .response:last-of-type {
       margin-right: .375rem;
@@ -188,9 +190,10 @@ input, textarea {
   position: relative;
   content: "*";
   color: coral;
-  font-size: 140%;
-  line-height: 0;
-  margin: 0 0 0 .125em; }
+  font-size: 120%;
+  line-height: 1;
+  margin: 0;
+  top: .125em; }
 
 .question-number {
   width: 2.5em !important; }
@@ -218,6 +221,7 @@ option[selected] .select-paceholder {
   bottom: 0;
   left: 0; }
   .styled-radio input:before {
+    font-family: FontAwesome;
     opacity: 1;
     content: '';
     position: absolute;
@@ -226,11 +230,15 @@ option[selected] .select-paceholder {
     bottom: 0;
     left: 0;
     margin: auto;
-    border: 2px solid dodgerblue;
+    border: 2px solid #004730;
     background: white;
     border-radius: 50%; }
   .styled-radio input:checked:before {
-    background: dodgerblue; }
+    background: #004730;
+    content: '\f00c';
+    color: white;
+    text-indent: .125em;
+    line-height: 1.25; }
 
 .styled-checkbox input {
   position: relative;
@@ -248,11 +256,11 @@ option[selected] .select-paceholder {
     display: block;
     height: 1.5em;
     width: 1.5em;
-    border: 2px solid dodgerblue;
+    border: 2px solid #004730;
     background: white;
     border-radius: .25em; }
   .styled-checkbox input:checked:before {
-    background: dodgerblue;
+    background: #004730;
     text-indent: .125em;
     content: "\f00c";
     color: white;
@@ -283,6 +291,11 @@ option[selected] .select-paceholder {
 .switch-paddle {
   margin-bottom: 0 !important; }
 
+.switch-paddle::after {
+  font-family: FontAwesome;
+  content: \f00c;
+  color: #004730; }
+
 .check-on-view, .check-off-view {
   font-size: 140%;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif; }
@@ -290,7 +303,7 @@ option[selected] .select-paceholder {
     margin-left: 0; }
 
 .check-on-view {
-  color: dodgerblue; }
+  color: #004730; }
 
 .check-off-view {
   color: #dedede; }
@@ -307,6 +320,14 @@ option[selected] .select-paceholder {
   text-align: center;
   background: lightgray;
   padding: 1em; }
+
+.callout {
+  max-width: 100% !important;
+  margin: .5em 0;
+  padding: .875em 0 0 !important; }
+
+.submitted-icon {
+  font-size: 150%; }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -3230,7 +3251,7 @@ html.is-reveal-open body {
     transform: translate3d(0, 0, 0);
     border-radius: 0; }
   input:checked ~ .switch-paddle {
-    background: dodgerblue; }
+    background: #004730; }
     input:checked ~ .switch-paddle::after {
       left: 2.25rem; }
   [data-whatinput='mouse'] input:focus ~ .switch-paddle {
@@ -3544,7 +3565,7 @@ table.hover tr:nth-of-type(even):hover {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: dodgerblue; }
+    background-color: #004730; }
   .top-bar ul ul {
     background-color: #e6e6e6; }
   .top-bar input {
